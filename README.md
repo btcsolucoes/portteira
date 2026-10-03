@@ -52,9 +52,9 @@ npm run export:pages
 
 ## Publicação no GitHub Pages
 
-O workflow em `.github/workflows/pages.yml` valida, compila e publica o site quando atualizado o branch `codex/portteira`, `main` ou quando iniciado manualmente. O modo de publicação do Pages deve ser GitHub Actions. O workflow usa apenas o token temporário da própria execução, sem credenciais de associações.
+A publicação atual usa o branch `codex/pages`, com o conteúdo compilado na raiz. O código-fonte fica no branch padrão `codex/portteira`. Alterar apenas o código-fonte não atualiza o site: valide com `npm run check`, execute `npm run export:pages` e publique a nova saída no branch do site.
 
-Caso a credencial de envio não tenha permissão para gravar workflows, o conteúdo de `apps/mobile/dist-pages` também pode ser publicado em um branch dedicado do Pages. O código-fonte e a saída compilada devem permanecer separados.
+O modelo opcional em `docs/deployment/pages-workflow.yml` está pronto para validação, compilação e publicação automáticas. Ele não está ativo: a credencial usada na entrega não tem permissão para criar workflows. Para adotá-lo futuramente, um administrador com acesso adequado deve colocá-lo em `.github/workflows/pages.yml` e alterar o modo de publicação do Pages para GitHub Actions. Não é necessário nenhum segredo de associação para a prévia.
 
 GitHub Pages não oferece reescritas de servidor: as rotas fixas têm arquivos próprios; uma URL dinâmica de anúncio usa `404.html` para abrir o aplicativo na mesma URL. O servidor pode responder HTTP 404 nessa primeira requisição, embora a interface funcione. Identificadores de anúncios locais só resolvem no navegador onde foram criados.
 
