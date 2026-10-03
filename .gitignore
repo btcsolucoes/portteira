@@ -1,0 +1,21 @@
+node_modules/
+.expo/
+dist/
+dist-pages/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+android/
+ios/
+.DS_Store
+*.log
+.impeccable/cache/
+artifacts/
+.agents/
+skills-lock.json
+# Legacy demonstration assets have no documented origin and are not distributed.
+apps/mobile/assets/horse-demo.*
+apps/mobile/assets/horse-portrait.*
+apps/mobile/assets/horse-arena.*

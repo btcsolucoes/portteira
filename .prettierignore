@@ -1,0 +1,11 @@
+node_modules
+.expo
+dist
+dist-pages
+coverage
+.agents
+skills-lock.json
+package-lock.json
+.impeccable
+artifacts
+**/expo-env.d.ts
